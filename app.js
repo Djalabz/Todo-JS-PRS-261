@@ -87,8 +87,9 @@ function deleteTodo(todo) {
     // Il faut maintenant aussi changer le tableau des todos dans le LS
     localStorage.setItem("todos", JSON.stringify(allTodos))
 
+    // On vide la section des Todos...
     todosSection.innerHTML = ""
-
+    // ... afin de mieux la remplir du tableau mis à jour
     allTodos.forEach((todo) => {
         displayTodo(todo)
     })
